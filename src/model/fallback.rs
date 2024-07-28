@@ -4,11 +4,11 @@ use askama::Template;
 
 #[derive(Template)]
 #[template(path = "404.html")]
-pub struct NotFound {
+pub struct FallbackTemplate {
     pub message: String
 }
 
-impl NotFound {
+impl FallbackTemplate {
     pub fn new(message: String) -> Self {
         Self { message }
     }
