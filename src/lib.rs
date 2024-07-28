@@ -8,7 +8,7 @@ use kv::KvStore;
 use tower_service::Service;
 use worker::*;
 use middleware::login_middleware;
-use service::{hello::hello_handle, index::index_handle};
+use service::{hello::hello_handle, index::index_handle, not_found::not_found_handle};
 
 
 #[derive(Clone)]
@@ -35,6 +35,7 @@ fn router(state: AppState) -> Router {
         .route("/", get(index_handle))
         .route("/hello/:message", get(hello_handle))
         .layer(axum::middleware::from_fn(login_middleware))
+        .fallback(not_found_handle)
         .with_state(state)
 }
 
