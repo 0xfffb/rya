@@ -1,0 +1,10 @@
+name = "rya-worker"
+main = "build/worker/shim.mjs"
+compatibility_date = "2024-07-26"
+
+kv_namespaces = [
+    { binding = "rya-worker", id = "308075fe7e744602aaec65967711e6c9"}
+]
+
+[build]
+command = "cargo install -q worker-build && worker-build --release"
