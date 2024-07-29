@@ -1,7 +1,7 @@
 
 use askama_axum::IntoResponse;
 use axum::{http::Uri, response::Response};
-use crate::model::fallback::FallbackTemplate;
+use crate::view::fallback::FallbackTemplate;
 
 
 pub async fn fallback_handle(uri: Uri) -> Response {

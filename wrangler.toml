@@ -6,5 +6,10 @@ kv_namespaces = [
     { binding = "rya-worker", id = "308075fe7e744602aaec65967711e6c9"}
 ]
 
+[[d1_databases]]
+binding = "ray-worker"
+database_name = "ray-worker"
+database_id = "218a723e-be1a-4a66-bdc3-7290f5ba0b60"
+
 [build]
 command = "cargo install -q worker-build && worker-build --release"

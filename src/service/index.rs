@@ -1,6 +1,6 @@
 use axum::response::{ IntoResponse, Response};
 
-use crate::model::index::IndexTemplate;
+use crate::view::index::IndexTemplate;
 
 
 #[worker::send]

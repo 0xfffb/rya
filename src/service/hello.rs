@@ -2,7 +2,7 @@ use askama_axum::IntoResponse;
 use axum::extract::{Path, State};
 use axum::response::Response;
 
-use crate::model::hello::HelloTemplate;
+use crate::view::hello::HelloTemplate;
 use crate::AppState;
 
 #[worker::send]
